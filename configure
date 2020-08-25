@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# The following OCaml packages are needed for the editor support.
+#
+echo "CSCI 1103 setup - install OCaml packages for editor support."
+
+opam install merlin
+opam install ocp-indent
+opam install ocaml-makefile
+
+# The following appends two lines to the ~/.ocamlinit file 
+# so that an OCaml REPL will have access to the class library
+# definitions.
+#
+echo "CSCI 1103 setup - add to the .ocamlinit file ..."
+
+echo "#require \"animate\";;" >> $HOME/.ocamlinit
+echo "#require \"animate.lib\";;" >> $HOME/.ocamlinit
+
+# The following makes a ~/.merlin file. The merlin Ocaml editor
+# support uses this file to learn about the class package.
+#
+echo "CSCI 1103 setup - add to the .merlin file ..."
+
+echo "PKG animate" >> $HOME/.merlin
+
+# The following installs two files that patch problems with
+# atom's REPL package.
+#
+echo "CSCI 1103 setup - patch atom's REPL package ..."
+
+cp ./replOcaml.js $HOME/.atom/packages/Repl/Repls/
+cp ./ReplView.coffee $HOME/.atom/packages/Repl/lib/Repl-View/
+
+echo "CSCI 1103 setup - done."
