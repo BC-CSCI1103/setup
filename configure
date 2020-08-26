@@ -3,10 +3,12 @@
 # The following OCaml packages are needed for the editor support.
 #
 echo "CSCI 1103 setup - install OCaml packages for editor support."
+echo "CSCI 1103 setup - Reply in the affirmative when prompted."
 
 opam install merlin
 opam install ocp-indent
 opam install ocaml-makefile
+opam pin add animate https://github.com/BC-CSCI1103/animate.git
 
 # The following appends two lines to the ~/.ocamlinit file 
 # so that an OCaml REPL will have access to the class library
@@ -23,13 +25,5 @@ echo "#require \"animate.lib\";;" >> $HOME/.ocamlinit
 echo "CSCI 1103 setup - add to the .merlin file ..."
 
 echo "PKG animate" >> $HOME/.merlin
-
-# The following installs two files that patch problems with
-# atom's REPL package.
-#
-echo "CSCI 1103 setup - patch atom's REPL package ..."
-
-cp ./replOcaml.js $HOME/.atom/packages/Repl/Repls/
-cp ./ReplView.coffee $HOME/.atom/packages/Repl/lib/Repl-View/
 
 echo "CSCI 1103 setup - done."
