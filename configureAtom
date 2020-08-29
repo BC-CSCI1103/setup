@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo "CSCI 1103 setup - install some packages in atom and then patch atom's REPL"
+echo "package. NB: this script shouldn't be executed until AFTER atom is installed."
+
+apm install atom-clock
+apm install linter
+apm install linter-ui-default
+apm install platformio-ide-terminal
+apm install language-ocaml
+apm install ocaml-merlin
+apm install ocaml-indent
+apm install REPL
+
+# The REPL package doesn't work for OCaml, replace the buggy files with these versions.
+#
+cp ./src/replOcaml.js $HOME/.atom/packages/Repl/Repls/
+cp ./src/ReplView.coffee $HOME/.atom/packages/Repl/lib/Repl-View/
+
+echo "CSCI 1103 configureAtom - done."
