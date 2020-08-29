@@ -1,5 +1,0 @@
-(library
-  (flags -opaque)
-  (name lib)
-  (wrapped false)
-  (modules lib assert wav))

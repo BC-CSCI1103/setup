@@ -1,12 +1,10 @@
-(* file: stopNGo.ml
+(* file: main.ml of stopNgo app
    author: Bob Muller
 
-   CS1103 Computer Science 1 Honors
+   CSCI 1103 Computer Science 1 Honors
 
-   A basic animation function stopping a ball when
-  the touchpad is released.
+   A basic animation function stopping a ball when the touchpad is released.
 *)
-
 type state = Stop | Go
 
 (* toggle : state -> state *)
