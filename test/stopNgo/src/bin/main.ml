@@ -22,6 +22,8 @@ let displayWidth = displayHeight
 let delta = 2
 let radius = 100
 let circle = Image.circle radius Color.red
+let courseName = Image.text "CSCI 1103" ~size:38. Color.white
+let circle = Image.placeImage courseName (5, 85) circle
 let y = displayHeight / 2 - radius
 
 let backGround =
