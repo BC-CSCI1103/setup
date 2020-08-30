@@ -5,6 +5,8 @@ echo "package. NB: this script shouldn't be executed until AFTER atom is install
 
 apm install atom-clock
 apm install linter
+apm install intentions
+apm install busy-signal
 apm install linter-ui-default
 apm install platformio-ide-terminal
 apm install language-ocaml
