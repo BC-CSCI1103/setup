@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Patching WSL/VSCode PATH problem ..."
+echo "# patching WSL/VSCode PATH problem" >> $HOME/.bash_profile
+echo "if test -z \`echo \"\$PATH\" | grep -o \"Microsoft VS Code\"\` &> /dev/null" >> $HOME/.bash_profile
+echo "then" >> $HOME/.bash_profile
+echo "export PATH=\$PATH:\"/mnt/c/Users/$1/AppData/Local/Programs/Microsoft VS Code/bin\"" >> $HOME/.bash_profile
+echo "fi" >> $HOME/.bash_profile
+echo "Run the command: source ~/.bash_profile"
+echo "Running the command: which code"
+echo "should now return /mnt/c/Users/.../Microsoft VS Code/bin"
