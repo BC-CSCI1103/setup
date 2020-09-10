@@ -7,9 +7,11 @@ let () =
 (* ## added by OPAM user-setup for ocamltop / base ## 3ec62baf6f9c219ae06d9814069da862 ## you can edit, but keep this line
   *)
 #use "topfind";;
-#load "unix.cma";;
-
 (* ## end of OPAM user-setup addition for ocamltop / base ## keep this line *)
 
-#require "animate";;
+#load "unix.cma";;
 #require "animate.lib";;
+
+(* The animate package isn't usable in a REPL for some installations 
+   #require "animate";;
+*)
