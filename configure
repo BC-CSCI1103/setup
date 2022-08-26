@@ -26,4 +26,9 @@ echo "CSCI 1103 setup - add to the .merlin file ..."
 
 echo "PKG animate" >> $HOME/.merlin
 
+# Introduce a "code" CLI command for MacOS users of vscode
+#
+echo "export PATH=\$PATH:\"/Applications/Visual Studio Code.app/Contents/Resources/app/bin\"" >> $HOME/.bash_profile
+echo "Run the command: source ~/.bash_profile"
+
 echo "CSCI 1103 setup - done."
