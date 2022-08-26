@@ -26,7 +26,12 @@ echo "CSCI 1103 setup - add to the .merlin file ..."
 
 echo "PKG animate" >> $HOME/.merlin
 
-# Introduce a "code" CLI command for MacOS users of vscode
+# Fall 2022: vscode support
+#
+opam install ocaml-lsp-server
+opam install ocamlformat
+
+# Add vscode binary ("code") to the PATH
 #
 echo "export PATH=\$PATH:\"/Applications/Visual Studio Code.app/Contents/Resources/app/bin\"" >> $HOME/.bash_profile
 echo "Run the command: source ~/.bash_profile"
