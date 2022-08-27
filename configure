@@ -17,6 +17,7 @@ opam pin add animate https://github.com/BC-CSCI1103/animate.git
 #
 echo "CSCI 1103 setup - add to the .ocamlinit file ..."
 
+echo "#load \"unix.cma\";;" >> $HOME/.ocamlinit
 echo "#require \"animate.lib\";;" >> $HOME/.ocamlinit
 
 # The following makes a ~/.merlin file. The merlin Ocaml editor
