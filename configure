@@ -8,6 +8,7 @@ echo "CSCI 1103 setup - Reply in the affirmative when prompted."
 opam install merlin
 opam install ocp-indent
 opam install ocaml-makefile
+opam user-setup install
 opam pin add animate https://github.com/BC-CSCI1103/animate.git
 
 # The following appends two lines to the ~/.ocamlinit file 
