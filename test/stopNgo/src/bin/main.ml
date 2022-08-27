@@ -19,7 +19,7 @@ type model = { state : state
 
 let displayHeight = 800.
 let displayWidth = displayHeight
-let delta = 2.
+let delta = 2.0
 let radius = 100.
 let circle = Image.circle radius Color.red
 let courseName = Image.text "CSCI 1103" ~size:38. Color.white
