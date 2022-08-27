@@ -11,7 +11,7 @@ type state = Stop | Go
 let toggle state =
   match state with
   | Stop -> Go
-  | Go -> Stop
+  | Go   -> Stop
 
 type model = { state : state
              ; x : float
@@ -37,7 +37,9 @@ let update model =
   | Go -> { model with x = mod_float (model.x +. delta) displayWidth }
   | Stop -> model
 
-let initialModel = {state = Go; x = -. radius}
+let initialModel = { state = Go
+                   ; x = -. radius
+                   }
 
 let handleMouse model x y event =
   match event = "button_up" with
