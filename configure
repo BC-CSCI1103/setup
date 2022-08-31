@@ -5,6 +5,8 @@
 echo "CSCI 1103 setup - install OCaml packages for editor support."
 echo "CSCI 1103 setup - Reply in the affirmative when prompted."
 
+opam install -y utop ocaml-lsp-server ocamlformat ocamlformat-rpc
+
 opam install merlin
 opam install ocp-indent
 opam install ocaml-makefile
